@@ -26,7 +26,6 @@ function App() {
         <Route path='login' element={<LoginSignUp/>}/>
       </Routes>
       </BrowserRouter>
-      <Hero/>
     </div>
   );
 }
