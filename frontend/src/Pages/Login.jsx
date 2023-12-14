@@ -1,18 +1,23 @@
-import React  from "react";
+import React from "react";
 import './CSS/LoginSignUp.css';
+import { Link } from "react-router-dom";
 
-const LoginSignUp = () => {
+
+const Login = () => {
     return (
         <div className="login-signup">
             <div className="login-signup-container">
-                <h1>Sign Up</h1>
+                <h1>Login</h1>
+                
                 <div className="login-signup-fields">
-                    <input type="text" placeholder="Your Name" />
                     <input type="email" placeholder="Email Address" />
                     <input type="password" placeholder="Password" />
                 </div>
-                <button>Submit</button>
-                <p className="login-signup-login">Already have an account? <span>Login Here</span></p>
+                <button>Log In</button>
+                
+                <p className="login-signup-login">Don't have an account? </p>
+                
+                <Link to="/signup">Sign Up Here</Link>
                 <div className="login-signup-agree">
                     <input type="checkbox" name="" id='' />
                     <p>By continuing, I agree to the terms of use and privacy policy.</p>
@@ -22,4 +27,4 @@ const LoginSignUp = () => {
     )
 }
 
-export default LoginSignUp;
+export default Login;
