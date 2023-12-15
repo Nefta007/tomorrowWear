@@ -24,7 +24,6 @@ db.once('open', async () => {
 
 	const products = await Product.insertMany([
 		{
-			id: 1,
 			name: 'Navy Jacket',
 			image: './product_1.png',
 			category: categories[0]._id,
@@ -32,7 +31,7 @@ db.once('open', async () => {
 			old_price: 199.99,
 		},
 		{
-			id: 2,
+
 			name: 'White Full Set',
 			image: './product_2.png',
 			category: categories[0]._id,
@@ -40,7 +39,7 @@ db.once('open', async () => {
 			old_price: 149.99,
 		},
 		{
-			id: 3,
+
 			name: 'Nike Tank Top',
 			image: './product_3.png',
 			category: categories[0]._id,
@@ -48,7 +47,7 @@ db.once('open', async () => {
 			old_price: 99.99,
 		},
 		{
-			id: 4,
+
 			name: 'Gray Full Set',
 			image: './product_4.png',
 			category: categories[0]._id,
@@ -66,7 +65,7 @@ db.once('open', async () => {
 		password: 'password12345',
 		orders: [
 			{
-				products: [products[0]._id, products[0]._id, products[1]._id]
+				products: [products[0]._id, products[1]._id, products[2]._id]
 			}
 		]
 	})

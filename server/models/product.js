@@ -14,7 +14,12 @@ const productSchema = new Schema({
 	image: {
 		type: String,
 	},
-	price: {
+	new_price: {
+		type: Number,
+		required: true,
+		min: 0.99,
+	},
+	old_price: {
 		type: Number,
 		required: true,
 		min: 0.99,
