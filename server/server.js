@@ -21,8 +21,6 @@ const startApolloServer = async () => {
 	app.use(express.urlencoded({ extended: false }))
 	app.use(express.json())
 
-	// Serve up static assets
-	app.use('/images', express.static(path.join(__dirname, '../client/images')))
 
 	app.use(
 		'/graphql',
@@ -32,10 +30,10 @@ const startApolloServer = async () => {
 	)
 
 	if (process.env.NODE_ENV === 'production') {
-		app.use(express.static(path.join(__dirname, '../client/dist')))
+		app.use(express.static(path.join(__dirname, '../frontend/build')))
 
 		app.get('*', (req, res) => {
-			res.sendFile(path.join(__dirname, '../client/dist/index.html'))
+			res.sendFile(path.join(__dirname, '../frontend/build/index.html'))
 		})
 	}
 
