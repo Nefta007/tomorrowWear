@@ -1,8 +1,22 @@
 {
-  "dependencies": {
-    "create-react": "^0.0.0",
-    "create-react-app": "^1.2.1",
-    "mongoose": "^8.0.3",
-    "react": "^18.2.0"
+  "name": "mern-project-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server --ignore frontend",
+    "develop": "concurrently \"cd server && npm run start\" \"cd frontend && npm run start\"",
+    "install": "cd server && npm i && cd ../frontend && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd frontend && npm run build && cd ../ && npm run seed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  },
+  "engines": {
+    "node": "20.5.1"
   }
 }

@@ -1,11 +1,12 @@
 const db = require('./connection');
 const { User, Product, Category } = require('../models');
 const cleanDB = require('./cleanDB');
-import { Product, User, Category } from '../models'
-import p1_img from './product_1.png'
-import p2_img from './product_2.png'
-import p3_img from './product_3.png'
-import p4_img from './product_4.png'
+
+// const { Product, User, Category } = rquire('../models');
+// import p1_img from './product_1.png'
+// import p2_img from './product_2.png'
+// import p3_img from './product_3.png'
+// import p4_img from './product_4.png'
 
 
 db.once('open', async () => {
@@ -25,7 +26,7 @@ db.once('open', async () => {
 		{
 			id: 1,
 			name: 'Navy Jacket',
-			image: p1_img,
+			image: './product_1.png',
 			category: categories[0]._id,
 			new_price: 129.99,
 			old_price: 199.99,
@@ -33,7 +34,7 @@ db.once('open', async () => {
 		{
 			id: 2,
 			name: 'White Full Set',
-			image: p2_img,
+			image: './product_2.png',
 			category: categories[0]._id,
 			new_price: 99.99,
 			old_price: 149.99,
@@ -41,7 +42,7 @@ db.once('open', async () => {
 		{
 			id: 3,
 			name: 'Nike Tank Top',
-			image: p3_img,
+			image: './product_3.png',
 			category: categories[0]._id,
 			new_price: 64.99,
 			old_price: 99.99,
@@ -49,7 +50,7 @@ db.once('open', async () => {
 		{
 			id: 4,
 			name: 'Gray Full Set',
-			image: p4_img,
+			image: './product_4.png',
 			category: categories[0]._id,
 			new_price: 99.99,
 			old_price: 149.99,
